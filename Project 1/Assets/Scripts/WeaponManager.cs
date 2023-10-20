@@ -5,15 +5,22 @@ using UnityEngine.InputSystem;
 
 public class WeaponManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    public GameObject BulletPrefab;
+    public Transform BulletSpawnPoint;
 
     // Update is called once per frame
     void Update()
     {
+        if (Keyboard.current.spaceKey.wasPressedThisFrame)
+        {
+            ShootBullet();
+        }
+    }
+
+    public void ShootBullet()
+    {
+        GameObject bullet = Instantiate(BulletPrefab, BulletSpawnPoint.position, BulletSpawnPoint.rotation);
         
     }
 }
