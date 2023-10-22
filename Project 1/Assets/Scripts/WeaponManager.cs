@@ -8,19 +8,14 @@ public class WeaponManager : MonoBehaviour
     [SerializeField]
     public GameObject BulletPrefab;
     public Transform BulletSpawnPoint;
+    public List<GameObject> bullets = new List<GameObject>();
 
     // Update is called once per frame
     void Update()
     {
         if (Keyboard.current.spaceKey.wasPressedThisFrame)
         {
-            ShootBullet();
+            Instantiate(BulletPrefab, BulletSpawnPoint.position, BulletSpawnPoint.rotation);
         }
-    }
-
-    public void ShootBullet()
-    {
-        GameObject bullet = Instantiate(BulletPrefab, BulletSpawnPoint.position, BulletSpawnPoint.rotation);
-        
     }
 }

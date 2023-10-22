@@ -6,7 +6,7 @@ using UnityEngine;
 public class CollisionManager : MonoBehaviour
 {
     public GameObject Player;   //reference to player
-    public List<GameObject> EnemyList;      
+    public List<GameObject> EnemyList = new List<GameObject>();
 
     // Update is called once per frame
     void Update()
@@ -36,19 +36,22 @@ public class CollisionManager : MonoBehaviour
 
     bool Collisions(GameObject player, GameObject enemies)
     {
-        Vector3 minA = player.transform.position - player.transform.localScale / 2f;
-        Vector3 maxA = player.transform.position + player.transform.localScale / 2f;
-        Vector3 minB = enemies.transform.position - enemies.transform.localScale / 2f;
-        Vector3 maxB = enemies.transform.position + enemies.transform.localScale / 2f;
+        SpriteRenderer playerRenderer = player.GetComponent<SpriteRenderer>();
+        SpriteRenderer enemyRenderer = enemies.GetComponent<SpriteRenderer>();
 
-        if (maxA.x < minB.x || minA.x > maxB.x)
+        Vector3 aMax = playerRenderer.bounds.max;
+        Vector3 aMin = playerRenderer.bounds.min;
+        Vector3 bMax = enemyRenderer.bounds.max;
+        Vector3 bMin = enemyRenderer.bounds.min;
+
+        if (bMin.x < aMax.x && bMax.x > aMin.x)
         {
-            return false;
+            if (bMin.y > aMin.y && bMin.y < aMax.y)
+            {
+                return true;
+            }
         }
-        if (maxA.y < minB.y || minA.y > maxB.y)
-        {
-            return false;
-        }
-        return true;
+
+        return false;
     }
 }
