@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class BulletMovement : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class BulletMovement : MonoBehaviour
     public Vector2 velocity;
     public Vector2 position;
 
+    public Keyboard kbState;
+
     public void Start()
     {
         position = transform.position;
@@ -19,8 +22,24 @@ public class BulletMovement : MonoBehaviour
 
     private void Update()
     {
-        // Establish the direction
-        direction = transform.position.normalized;
+
+        // Establish the direction - this does not work
+        if (Keyboard.current.dKey.wasPressedThisFrame)
+        {
+            direction = Vector2.right;
+        }
+        else if (Keyboard.current.sKey.wasPressedThisFrame)
+        {
+            direction = Vector2.down;
+        }
+        else if (Keyboard.current.aKey.wasPressedThisFrame)
+        {
+            direction = Vector2.left;
+        }
+        else if (Keyboard.current.wKey.wasPressedThisFrame)
+        {
+            direction = Vector2.up;
+        }
 
         // Apply direction and speed to velocity
         velocity = direction * speed * Time.deltaTime;
