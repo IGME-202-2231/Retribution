@@ -123,6 +123,25 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &246961382 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4457137046860579525, guid: 7fcd76722556f7644a622fb7b45b6bc8, type: 3}
+  m_PrefabInstance: {fileID: 814437005}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &246961386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246961382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00330c8bbd71fd49921cf06d87d324f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
+  health: 1
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,7 +297,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4457137046860579525, guid: 7fcd76722556f7644a622fb7b45b6bc8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 246961386}
   m_SourcePrefab: {fileID: 100100000, guid: 7fcd76722556f7644a622fb7b45b6bc8, type: 3}
 --- !u!1 &954072071
 GameObject:
@@ -417,6 +439,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6631155982875234313, guid: 42896d5cd485a55459740e48dab69fe4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1162503731}
+    - targetCorrespondingSourceObject: {fileID: 6631155982875234313, guid: 42896d5cd485a55459740e48dab69fe4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1162503732}
   m_SourcePrefab: {fileID: 100100000, guid: 42896d5cd485a55459740e48dab69fe4, type: 3}
 --- !u!1 &1162503720 stripped
 GameObject:
@@ -534,6 +559,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootingPoint: {fileID: 2091054190}
   bulletPF: {fileID: 1245931113856750001, guid: 6b5198d78e839c94aac6eceadd6e433d, type: 3}
+  shootInterval: 1
+  currentTime: 0
+--- !u!114 &1162503732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162503720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a3b74ef20abae44aa4e12b5e77835ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: 3
+  collisionManager: {fileID: 0}
 --- !u!1 &1737458511
 GameObject:
   m_ObjectHideFlags: 0
@@ -565,6 +606,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1162503720}
   EnemyList: []
+  Bullet: {fileID: 1245931113856750001, guid: 6b5198d78e839c94aac6eceadd6e433d, type: 3}
 --- !u!4 &1737458513
 Transform:
   m_ObjectHideFlags: 0

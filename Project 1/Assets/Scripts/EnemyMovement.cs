@@ -5,7 +5,6 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     public float speed = 5.0f; 
-    public GameObject spawner;
 
     public Vector2 direction;
     public Vector2 velocity;
