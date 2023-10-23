@@ -1,4 +1,4 @@
-# Project Retribution
+# Project Guard'n Duty
 
 [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet)
 
@@ -11,13 +11,13 @@
 
 -   Camera Orientation: topdown
 -   Camera Movement: static camera
--   Player Health: player will have 3 hearts
+-   Player Health: player will have 3 lives
 -   End Condition: the game will end once a player loses all 3 of their lives
 -   Scoring: points are gathered by the amount of enemies the player is able to kill 
 
 ### Game Description
 
-In this top-down shoot'em up, you play as Marcela, a simple demon looking for her next meal. Unfortunately for you, you made a miscalculation while casting your portal to the human realm, and found yourself appearing in the middle of the cities cathedral. Fight off the men of the cloth for as long as you're able. 
+In this top-down shoot'em up, you play as Gustavo the Fungus- Gus for short. As you make your rounds of the Garden, you notice invasive foliage creeping in! Being the only one on the scene, you take up arms, and will fight them off for as long as possible.
 
 ### Controls
 
