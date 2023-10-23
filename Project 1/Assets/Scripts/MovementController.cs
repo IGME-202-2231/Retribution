@@ -10,8 +10,11 @@ public class MovementController : MonoBehaviour
     [SerializeField]
 
     float speed = 5.0f;
+
     Vector3 direction = Vector3.zero;
+
     Vector3 velocity = Vector3.zero;
+
     private Camera gameCamera;
 
     public Vector3 Direction
@@ -40,6 +43,7 @@ public class MovementController : MonoBehaviour
 
         transform.position = objectPosition;
 
+        ScreenWrap();
     }
 
     public void SetDirection(Vector3 newDirection)
@@ -51,5 +55,28 @@ public class MovementController : MonoBehaviour
         {
             transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
         } */
+    }
+
+    private void ScreenWrap()
+    {
+        float camHeight = gameCamera.orthographicSize;
+        float camWidth = camHeight * gameCamera.aspect;
+
+        if (objectPosition.x < -camWidth)
+        {
+            objectPosition.x = camWidth;
+        }
+        if (objectPosition.x > camWidth)
+        {
+            objectPosition.x = -camWidth;
+        }
+        if (objectPosition.y < -camHeight)
+        {
+            objectPosition.y = camHeight;
+        }
+        if (objectPosition.y > camHeight)
+        {
+            objectPosition.y = -camHeight;
+        }
     }
 }

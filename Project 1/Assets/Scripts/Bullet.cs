@@ -27,10 +27,4 @@ public class Bullet : MonoBehaviour
 
         transform.position = position;
     }
-
-    // can't shoot bullet every frame
-    void BulletDelay(float delay)
-    {
-
-    }
 }

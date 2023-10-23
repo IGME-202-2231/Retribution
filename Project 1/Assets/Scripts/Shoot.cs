@@ -8,13 +8,26 @@ public class Shoot : MonoBehaviour
     public Transform shootingPoint;
     public GameObject bulletPF;
 
+    [SerializeField]
+    public float shootInterval = 0.05f;
+    public float currentTime = 0f;
 
     // Update is called once per frame
     void Update()
     {
-        if (Keyboard.current.spaceKey.wasPressedThisFrame)
+        // bullet delay timer
+        if (currentTime < shootInterval)
         {
-            Instantiate(bulletPF, shootingPoint.position, transform.rotation);
+            currentTime += Time.deltaTime;
         }
+        else if (currentTime >= shootInterval) 
+        {
+            if (Keyboard.current.spaceKey.wasPressedThisFrame)
+            {
+                Instantiate(bulletPF, shootingPoint.position, transform.rotation);
+                currentTime = 0f;
+            }
+        }
+        
     }
 }
