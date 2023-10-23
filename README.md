@@ -17,7 +17,7 @@
 
 ### Game Description
 
-In this top-down shoot'em up, you play as Gustavo the Fungus- Gus for short. As you make your rounds of the Garden, you notice invasive foliage creeping in! Being the only one on the scene, you take up arms, and will fight them off for as long as possible.
+In this top-down shoot'em up, you play as Gustavo the Fungus- the protector of the Garden. As you're making your daily rounds, you notice some invasive snails creeping in! Being the only one on the scene, you take up arms, your only job being to keep them out of the garden as long as possible.
 
 ### Controls
 
