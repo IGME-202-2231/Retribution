@@ -1,4 +1,4 @@
-# Project Retribution
+# Project Guard'n Duty
 
 [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet)
 
@@ -10,15 +10,14 @@
 ## Game Design
 
 -   Camera Orientation: topdown
--   Camera Movement: scrolling camera with position locked on the player
--   Player Health: player will have 3 hearts which can regenerate over time
--   End Condition: a round is won if the player can survive for 6 minutes
--   Scoring: points are gathered in the form of XP, which in turn levels up your character. These points can be collected from fallen enemies. 
+-   Camera Movement: static camera
+-   Player Health: player will have 3 lives
+-   End Condition: the game will end once a player loses all 3 of their lives
+-   Scoring: points are gathered by the amount of enemies the player is able to kill 
 
 ### Game Description
 
-In this top-down shoot'em up, you play as Lilith, a simple demon looking for her next meal. Unfortunately for you, the men of the cloth aren't too keen on being fed upon.
-Claw your way through the house of God to ensure this supper isn't your last, growing stronger with each passing minute. 
+In this top-down shoot'em up, you play as Gustavo the Fungus- Gus for short. As you make your rounds of the Garden, you notice invasive foliage creeping in! Being the only one on the scene, you take up arms, and will fight them off for as long as possible.
 
 ### Controls
 
@@ -31,8 +30,7 @@ Claw your way through the house of God to ensure this supper isn't your last, gr
 
 ## You Additions
 
-Using right click triggers a melee attack, allowing the player to hit multiple enemies within a close distance. As the player progresses throughout the level, this weapon
-can be upgraded, or outright swapped for a more powerful alternative. 
+All art assets have been personally drawn
 
 ## Sources
 
