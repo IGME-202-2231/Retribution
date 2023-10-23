@@ -397,7 +397,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2337823856773341102, guid: 42896d5cd485a55459740e48dab69fe4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7872366835184254680, guid: 42896d5cd485a55459740e48dab69fe4, type: 3}
@@ -405,14 +406,17 @@ PrefabInstance:
       addedObject: {fileID: 2091054190}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6631155982875234313, guid: 42896d5cd485a55459740e48dab69fe4, type: 3}
-      insertIndex: 2
+      insertIndex: -1
       addedObject: {fileID: 1162503721}
     - targetCorrespondingSourceObject: {fileID: 6631155982875234313, guid: 42896d5cd485a55459740e48dab69fe4, type: 3}
-      insertIndex: 3
+      insertIndex: -1
       addedObject: {fileID: 1162503725}
     - targetCorrespondingSourceObject: {fileID: 6631155982875234313, guid: 42896d5cd485a55459740e48dab69fe4, type: 3}
-      insertIndex: 4
+      insertIndex: -1
       addedObject: {fileID: 1162503724}
+    - targetCorrespondingSourceObject: {fileID: 6631155982875234313, guid: 42896d5cd485a55459740e48dab69fe4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1162503731}
   m_SourcePrefab: {fileID: 100100000, guid: 42896d5cd485a55459740e48dab69fe4, type: 3}
 --- !u!1 &1162503720 stripped
 GameObject:
@@ -516,6 +520,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7872366835184254680, guid: 42896d5cd485a55459740e48dab69fe4, type: 3}
   m_PrefabInstance: {fileID: 1162503719}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1162503731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162503720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1134462b23114804ea12aeac73b96c31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootingPoint: {fileID: 2091054190}
+  bulletPF: {fileID: 1245931113856750001, guid: 6b5198d78e839c94aac6eceadd6e433d, type: 3}
 --- !u!1 &1737458511
 GameObject:
   m_ObjectHideFlags: 0
@@ -702,7 +720,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2091054189}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.06, z: 0}
+  m_LocalPosition: {x: 1.95, y: -1.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

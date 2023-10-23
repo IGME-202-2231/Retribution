@@ -46,9 +46,10 @@ public class MovementController : MonoBehaviour
     {
         direction = newDirection.normalized;    
 
+        /*
         if (direction != Vector3.zero)
         {
             transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
-        }
+        } */
     }
 }
