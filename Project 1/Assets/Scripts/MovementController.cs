@@ -14,6 +14,16 @@ public class MovementController : MonoBehaviour
     Vector3 velocity = Vector3.zero;
     private Camera gameCamera;
 
+    public Vector3 Direction
+    {
+        get { return direction; }
+    }
+
+    public Vector3 ObjectPosition
+    {
+        get { return objectPosition; }
+    }
+
     // Start is called before the first frame update
     void Start()
     {

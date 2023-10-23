@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7872366835184254680}
   - component: {fileID: 5374255488905465267}
+  - component: {fileID: 2337823856773341102}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -24,8 +25,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6631155982875234313}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 1.0546833, y: 1.4351962, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -84,3 +85,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2337823856773341102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6631155982875234313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 797bc21e45d9cfd4fb89219eaaab66f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BulletPrefab: {fileID: 6744054187236880953, guid: 6b5198d78e839c94aac6eceadd6e433d, type: 3}
+  BulletSpawnPoint: {fileID: 7872366835184254680}
+  bullets: []
+  speed: 10
+  bulletDirection: {x: 0, y: 0}
+  velocity: {x: 0, y: 0}
+  position: {x: 0, y: 0}
