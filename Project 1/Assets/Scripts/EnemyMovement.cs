@@ -50,8 +50,10 @@ public class EnemyMovement : MonoBehaviour
         // Check if the enemy has moved off the screen
         if (transform.position.x < -10f) 
         {
+            FindObjectOfType<CollisionManager>().EnemyList.Remove(gameObject);
             // Deactivate the enemy
-            gameObject.SetActive(false);    // destroy instead
+            Destroy(gameObject);
+            //gameObject.SetActive(false);    // destroy instead
         }
     }
 }
