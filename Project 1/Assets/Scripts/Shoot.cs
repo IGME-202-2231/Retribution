@@ -31,8 +31,8 @@ public class Shoot : MonoBehaviour
         {
             if (Keyboard.current.spaceKey.wasPressedThisFrame)
             {
-                Instantiate(bulletPF, shootingPoint.position, transform.rotation);
-                collisionManager.Bullets.Add(bulletPF);
+                GameObject bullet = Instantiate(bulletPF, shootingPoint.position, transform.rotation);
+                collisionManager.Bullets.Add(bullet);
                 currentTime = 0f;
             }
         }

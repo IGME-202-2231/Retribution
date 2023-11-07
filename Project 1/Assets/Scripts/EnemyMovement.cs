@@ -2,6 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+enum MovementType
+{
+    straight,
+    updown,
+}
+
 public class EnemyMovement : MonoBehaviour
 {
     public float speed = 5.0f; 
@@ -10,9 +16,15 @@ public class EnemyMovement : MonoBehaviour
     public Vector2 velocity;
     public Vector2 position;
 
+    [SerializeField]
+    MovementType enemyMovementStyle;
+
+    float timer;
+
     public void Start()
     {
         position = transform.position;
+        timer = 0;
     }
 
     private void Update()
@@ -26,7 +38,10 @@ public class EnemyMovement : MonoBehaviour
         // Add velocity to position
         position = position + velocity;
 
+
+        timer += Time.deltaTime;
         // Check positions
+        position.y = Mathf.Sin(timer) * 4;
 
         // Set position to transform.position
         transform.position = position;
