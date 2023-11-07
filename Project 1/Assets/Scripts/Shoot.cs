@@ -19,7 +19,6 @@ public class Shoot : MonoBehaviour
         collisionManager = GameObject.Find("Manager").GetComponent<CollisionManager>();
     }
 
-
     // Update is called once per frame
     void Update()
     {

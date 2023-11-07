@@ -6,8 +6,9 @@ using UnityEngine;
 public class CollisionManager : MonoBehaviour
 {
     public GameObject Player;   // reference to player
-    public List<GameObject> EnemyList = new List<GameObject>();
-    public List<GameObject> Bullets = new List<GameObject>();   // reference to bullet
+    public Health PlayerHealth;
+    public List<GameObject> EnemyList = new List<GameObject>();     // reference to eemies
+    public List<GameObject> Bullets = new List<GameObject>();   // reference to bullets
 
     // Update is called once per frame
     void Update()
@@ -20,6 +21,7 @@ public class CollisionManager : MonoBehaviour
             {
                 isColliding = true;
                 enemy.GetComponent<SpriteRenderer>().color = Color.red;
+                PlayerHealth.TakeDamage();
                 Debug.Log("Colliding");
             }
             else enemy.GetComponent<SpriteRenderer>().color = Color.white;
@@ -81,4 +83,6 @@ public class CollisionManager : MonoBehaviour
 
         return false;
     }
+
+
 }

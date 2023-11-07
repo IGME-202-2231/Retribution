@@ -558,7 +558,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootingPoint: {fileID: 2091054190}
-  bulletPF: {fileID: 1245931113856750001, guid: 6b5198d78e839c94aac6eceadd6e433d, type: 3}
+  bulletPF: {fileID: 4628581540562606370, guid: 6b5198d78e839c94aac6eceadd6e433d, type: 3}
+  collisionManager: {fileID: 0}
   shootInterval: 1
   currentTime: 0
 --- !u!114 &1162503732
@@ -570,11 +571,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1162503720}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a3b74ef20abae44aa4e12b5e77835ca, type: 3}
+  m_Script: {fileID: 11500000, guid: 8041df6e5f8a6d44e9774cf632d7825d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: 3
-  collisionManager: {fileID: 0}
+  maxHealth: 3
+  currentHealth: 0
 --- !u!1 &1737458511
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,8 +606,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1162503720}
+  PlayerHealth: {fileID: 0}
   EnemyList: []
-  Bullet: {fileID: 1245931113856750001, guid: 6b5198d78e839c94aac6eceadd6e433d, type: 3}
+  Bullets: []
 --- !u!4 &1737458513
 Transform:
   m_ObjectHideFlags: 0
